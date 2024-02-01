@@ -1,7 +1,8 @@
 .categories-container {
-  background-color: pink;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 50px;
+  padding: 20px;
 }
