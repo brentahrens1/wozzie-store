@@ -1,0 +1,46 @@
+.button-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Single Day';
+  border: 1px solid #000000;
+  transition: all 200ms ease-in-out;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+    
+  &:hover {
+    transition: all 200ms ease-in-out;
+    background-color: black;
+    color: white;
+  }
+
+  &.google-sign-in {
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+    transition: all 200ms ease-in-out;
+    
+    &:hover {
+      transition: all 200ms ease-in-out;
+      background-color: darkblue;
+      border: 1px solid darkblue;
+    }
+  }
+
+  &.inverted {
+    background-color: black;
+    color: white;
+    transition: all 200ms ease-in-out;
+    
+    &:hover {
+      transition: all 200ms ease-in-out;
+      background-color: white;
+      color: black;
+    }
+  }
+}
