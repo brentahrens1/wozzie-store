@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 
 import './sign-up-form.styles.scss';
 
@@ -8,7 +8,6 @@ import {
   createUserDocFromAuth 
 } from '../../utils/firebase/firebase.utils';
 
-import { UserContext } from '../../contexts/user.context';
 import Button from '../button/button.component';
 
 const defaultFormFields = {
@@ -16,17 +15,15 @@ const defaultFormFields = {
   email: '',
   password: '',
   confirmPassword: ''
-}
+};
 
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
-  const { setCurrentUser } = useContext(UserContext);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,16 +31,13 @@ const SignUpForm = () => {
     if (password !== confirmPassword) {
       alert('Your passwords do not match');
       return;
-    }
+    };
 
     try {
       const { user } = await createAuthUserWithEmailAndPassword(
         email, 
         password
       );
-
-      setCurrentUser(user);
-
       await createUserDocFromAuth(user, { displayName });      
       resetFormFields();
     } catch(error) {
@@ -51,14 +45,14 @@ const SignUpForm = () => {
         alert('This email is already in use');
       }
       console.log(`use creation encountered an error`, error);
-    }
-  }
+    };
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormFields({...formFields, [name] : value});
-  }
+  };
 
   return (
     <div className='sign-up-form'>
