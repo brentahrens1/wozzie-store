@@ -1,6 +1,5 @@
 import { 
   signinWithGooglePopup,
-  createUserDocFromAuth,
   signInAuthUserWithEmailAndPassword
 } from "../../utils/firebase/firebase.utils";
 
