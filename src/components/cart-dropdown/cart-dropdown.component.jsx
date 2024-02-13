@@ -2,16 +2,25 @@ import './cart-dropdown.styles.scss';
 import Button from '../button/button.component';
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart-context';
+import CartItem from '../cart-item/cart-item.component';
 
 const CartDropdown = () => {
   const { isCartOpen } = useContext(CartContext);
-
+  const { cartItems } = useContext(CartContext);
   return (
     <div className={`cart-dropdown ${isCartOpen ? 'cart-dropdown-open' : '' }`}>
       <div className='cart-items'>
-
+        {
+          cartItems.map((item) => {
+            return (
+              <CartItem key={item.id} cartItem={item} /> 
+            )
+          })
+        }
       </div>
-      <Button>Go to checkout</Button>
+      <div className='cart-dropdown-footer'>
+        <Button>Go to checkout</Button>
+      </div>
     </div>
   )
 }

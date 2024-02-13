@@ -9,12 +9,18 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
   display: none;
-
+  padding: 15px;
+  
   .cart-items {
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .cart-dropdown-footer {
+    padding: 15px;
   }
 
   &.cart-dropdown-open {
