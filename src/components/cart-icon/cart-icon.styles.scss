@@ -1,0 +1,21 @@
+.cart-icon-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .cart-icon {
+    font-size: 30px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .cart-count {
+    font-size: 30px;
+    margin-left: 5px;
+    margin: 0;
+  }
+}
