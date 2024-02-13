@@ -1,0 +1,23 @@
+.checkout-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 150px;
+
+  .checkout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+
+    .header-block {
+      font-size: 18px;
+    }
+  }
+
+  .checkout-total {
+
+  }
+}

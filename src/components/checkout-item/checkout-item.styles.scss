@@ -1,0 +1,37 @@
+.checkout-cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .checkout-image-container {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .checkout-add-remove {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    h2 {
+      font-size: 20px;
+      margin: 0 7px;
+    }
+  }
+
+  .checkout-item-remove {
+    cursor: pointer;
+  }
+}
